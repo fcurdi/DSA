@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using DSA.DataStructures.Trees;
 
 namespace DSAUnitTests.DataStructures.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class TrieTests
     {
-        [TestMethod]
+        [Test]
         public void AddingAndCheckingIfContained()
         {
             var trie = new Trie();
@@ -36,7 +36,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAndRemovingSomeWordsAndCheckingIfContained()
         {
             var trie = new Trie();
@@ -78,7 +78,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length - removedWords);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingEverything()
         {
             var trie = new Trie();
@@ -129,7 +129,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingTrie()
         {
             var trie = new Trie();
@@ -175,7 +175,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfSortedAfterAdding()
         {
             var trie = new Trie();
@@ -216,7 +216,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfSortedAfterAddingAndRemovingSomeWords()
         {
             var trie = new Trie();
@@ -269,7 +269,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length - removedWords);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfPrefixIsContained()
         {
             var trie = new Trie();
@@ -301,7 +301,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void GetWordsByPrefixAndCheckIfSorted()
         {
             var trie = new Trie();

@@ -1,14 +1,14 @@
 ﻿using DSA.Algorithms.Subsequences;
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.Algorithms.Subsequences
 {
-    [TestClass]
+    [TestFixture]
     public class LongestCommonSubsequenceFinderTests
     {
-        [TestMethod]
+        [Test]
         public void CheckIfLCSLengthIsCorrect()
         {
             //Strings are axbycz and xaybzc
@@ -27,7 +27,7 @@ namespace DSAUnitTests.Algorithms.Subsequences
             Assert.IsTrue(length == 10);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfAllLCSAreOutputed()
         {
             //Strings are axbycz and xaybzc
@@ -85,7 +85,7 @@ namespace DSAUnitTests.Algorithms.Subsequences
             }
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfOneOutputedLCSIsFound()
         {
             //Strings are axbycz and xaybzc

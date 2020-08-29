@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Graphs;
 using DSA.Algorithms.Graphs;
 
 namespace DSAUnitTests.Algorithms.Graphs
 {
-    [TestClass]
+    [TestFixture]
     public class CyclesDetectorTests
     {
-        [TestMethod]
+        [Test]
         public void UndirectedCyclicGraphCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -43,7 +43,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsTrue(graph.IsCyclic());
         }
 
-        [TestMethod]
+        [Test]
         public void DirectedCyclicGraphCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -90,7 +90,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsTrue(graph.IsCyclic());
         }
 
-        [TestMethod]
+        [Test]
         public void UndirectedAcyclicGraphCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -121,7 +121,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(graph.IsCyclic());
         }
 
-        [TestMethod]
+        [Test]
         public void DirectedAcyclicGraphCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -164,7 +164,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(graph.IsCyclic());
         }
 
-        [TestMethod]
+        [Test]
         public void ForestCyclesCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };

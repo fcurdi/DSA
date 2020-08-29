@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Trees;
 
 namespace DSAUnitTests.DataStructures.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class SuffixTreeTests
     {
-        [TestMethod]
+        [Test]
         public void AddingAndCheckingIfContained()
         {
             var suffixTree = new SuffixTree();
@@ -38,7 +38,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(suffixTree.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAndRemovingSomeWordsAndCheckingIfContained()
         {
             var suffixTree = new SuffixTree();
@@ -80,7 +80,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(suffixTree.Count == words.Length - removedWords);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingEverything()
         {
             var suffixTree = new SuffixTree();
@@ -131,7 +131,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(suffixTree.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingSuffixTree()
         {
             var suffixTree = new SuffixTree();
@@ -177,7 +177,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(suffixTree.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfSortedAfterAdding()
         {
             var suffixTree = new SuffixTree();
@@ -218,7 +218,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(suffixTree.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfSortedAfterAddingAndRemovingSomeWords()
         {
             var suffixTree = new SuffixTree();
@@ -271,7 +271,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(suffixTree.Count == words.Length - removedWords);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfSuffixIsContained()
         {
             var suffixTree = new SuffixTree();
@@ -303,7 +303,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(suffixTree.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void GetWordsBySuffixAndCheckIfSorted()
         {
             var suffixTree = new SuffixTree();

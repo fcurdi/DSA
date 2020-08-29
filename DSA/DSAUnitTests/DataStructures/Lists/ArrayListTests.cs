@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Lists;
 using System.Linq;
 
 namespace DSAUnitTests.DataStructures.Lists
 {
-    [TestClass]
+    [TestFixture]
     public class ArrayListTests
     {
-        [TestMethod]
+        [Test]
         public void AddingItemsOneByOne()
         {
             var list = new ArrayList<int>();
@@ -34,7 +34,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingRangeOfItems()
         {
             var list = new ArrayList<int>();
@@ -67,7 +67,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list2.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializingArrayListWithCollection()
         {
             var list = new ArrayList<int>();
@@ -96,7 +96,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list2.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void RemovingAllExceptOne()
         {
             var list = new ArrayList<int>();
@@ -126,7 +126,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list[0] == itemCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializationWithZeroCapacityAndAddingItemsAfterwards()
         {
             var list = new ArrayList<int>(0);
@@ -152,7 +152,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void RemovingAllItemsAndAddingAgain()
         {
             var list = new ArrayList<int>();
@@ -191,7 +191,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && countWasZero);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveRangeOfItems()
         {
             var list = new ArrayList<int>();
@@ -217,7 +217,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list[0] == itemCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void InsertAllItemsAtTheBeginningAndCheckForReversedOrder()
         {
             var list = new ArrayList<int>();
@@ -247,7 +247,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && areReversed);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAtZeroUntilOneItemIsLeft()
         {
             var list = new ArrayList<int>();
@@ -276,7 +276,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list[0] == itemCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void IndexOfAndLastIndexOfTest()
         {
             var list = new ArrayList<int>();
@@ -307,7 +307,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && allInPlace);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfContainedBeforeAndAfterRemoval()
         {
             var list = new ArrayList<int>();
@@ -331,7 +331,7 @@ namespace DSAUnitTests.DataStructures.Lists
             Assert.IsTrue(list.Count == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingCollection()
         {
             var list = new ArrayList<int>();
@@ -365,7 +365,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && everythingIntact);
         }
 
-        [TestMethod]
+        [Test]
         public void InsertingRangeOfItemsAtTheMiddle()
         {
             var list = new ArrayList<int>();

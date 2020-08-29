@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Graphs;
 using DSA.Algorithms.Graphs;
 
 namespace DSAUnitTests.Algorithms.Graphs
 {
-    [TestClass]
+    [TestFixture]
     public class PrimMSTFinderTests
     {
-        [TestMethod]
+        [Test]
         public void PositiveEdgesWeightsAsAbsoluteVertexDifference()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -96,7 +96,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(mst.ContainsEdge(8, 5));
         }
 
-        [TestMethod]
+        [Test]
         public void PositiveEdgesWeightsAsVertexSum()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -184,7 +184,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(mst.ContainsEdge(8, 7));
         }
 
-        [TestMethod]
+        [Test]
         public void NegativeEdgesWeightsAsVertexDifference()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -272,7 +272,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(mst.ContainsEdge(8, 7));
         }
 
-        [TestMethod]
+        [Test]
         public void StringWeightsMST()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -358,7 +358,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(mst.ContainsEdge(8, 5));
         }
 
-        [TestMethod]
+        [Test]
         public void MinimumSpanningForest()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 , 10, 11, 12, 13, 14, 15, 16};

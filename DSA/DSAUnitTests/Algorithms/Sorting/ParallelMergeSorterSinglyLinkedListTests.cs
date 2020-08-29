@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Lists;
 using DSA.Algorithms.Sorting;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.Algorithms.Sorting
 {
-    [TestClass]
+    [TestFixture]
     public class ParallelMergeSorterSinglyLinkedListTests
     {
-        [TestMethod]
+        [Test]
         public void SortingInAscendingOrderAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();
@@ -44,7 +44,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInDescendingOrderAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();
@@ -79,7 +79,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInAscendingOrderUsingAComparisonAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();
@@ -114,7 +114,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInDescendingOrderUsingAComparisonAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();
@@ -149,7 +149,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInAscendingOrderUsingACustomComparerAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();
@@ -184,7 +184,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInDescendingOrderUsingACustomComparerAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();
@@ -219,7 +219,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfItemsInAscendingOrderAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();
@@ -267,7 +267,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfItemsInDescendingOrderAndCheckingIfSorted()
         {
             var list = new SinglyLinkedList<int>();

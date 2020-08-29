@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Collections.Generic;
 using DSA.Algorithms.Sorting;
 
 namespace DSAUnitTests.Algorithms.Sorting
 {
-    [TestClass]
+    [TestFixture]
     public class LSDRadixSorterTests
     {
-        [TestMethod]
+        [Test]
         public void SortingIntegersInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -43,7 +43,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingIntegersInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -78,7 +78,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfIntegersInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -116,7 +116,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfIntegersInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -154,7 +154,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingKeyValuePairKeysInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();
@@ -199,7 +199,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingKeyValuePairKeysInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();
@@ -246,7 +246,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfKeyValuePairKeysInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();
@@ -294,7 +294,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfKeyValuePairKeysInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();
@@ -344,7 +344,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingKeyValuePairValuesInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();
@@ -389,7 +389,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingKeyValuePairValuesInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();
@@ -436,7 +436,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfKeyValuePairValuesInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();
@@ -484,7 +484,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfKeyValuePairValuesInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<KeyValuePair<int, int>>();

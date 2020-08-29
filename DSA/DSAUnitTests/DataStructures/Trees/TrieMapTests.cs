@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Trees;
 
 namespace DSAUnitTests.DataStructures.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class TrieMapTests
     {
-        [TestMethod]
+        [Test]
         public void AddingAndCheckingIfContained()
         {
             var trie = new TrieMap<string>();
@@ -37,7 +37,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAndRemovingSomeWordsAndCheckingIfContained()
         {
             var trie = new TrieMap<string>();
@@ -79,7 +79,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length - removedWords);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingEverything()
         {
             var trie = new TrieMap<string>();
@@ -130,7 +130,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingTrieMap()
         {
             var trie = new TrieMap<string>();
@@ -176,7 +176,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfSortedAfterAdding()
         {
             var trie = new TrieMap<string>();
@@ -217,7 +217,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfSortedAfterAddingAndRemovingSomeWords()
         {
             var trie = new TrieMap<string>();
@@ -270,7 +270,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length - removedWords);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfPrefixIsContained()
         {
             var trie = new TrieMap<string>();
@@ -302,7 +302,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void GetWordsByPrefixAndCheckIfSorted()
         {
             var trie = new TrieMap<string>();
@@ -347,7 +347,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && prefixWords < words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingElementsWithIndexer()
         {
             var trie = new TrieMap<string>();
@@ -377,7 +377,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void UpdatingElementsWithIndexerUsingTryGetValueMethodToGetValue()
         {
             var trie = new TrieMap<string>();
@@ -427,7 +427,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && trie.Count == words.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void ContatinsValueBeforeAndAfterUpdatingValue()
         {
             var trie = new TrieMap<string>();

@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Queues;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.DataStructures.Queues
 {
-    [TestClass]
+    [TestFixture]
     public class MaxPriorityQueueTests
     {
-        [TestMethod]
+        [Test]
         public void AddingElementsAndCheckingIfExtractedInSortedOrder()
         {
             var pq = new MaxPriorityQueue<int, int>();
@@ -50,7 +50,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingElementsWithCustomComparerAndCheckingIfExtractedInSortedOrder()
         {
             //Creating heap with reversed comparer
@@ -95,7 +95,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void HeapifyUnsortedCollectionAndCheckIfExtractedInSortedOrder()
         {
             var pq = new MaxPriorityQueue<int, int>();
@@ -141,7 +141,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingHeap()
         {
             var pq = new MaxPriorityQueue<int, int>();
@@ -205,7 +205,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void ReplacingMaxElementAndCheckingIfExtractedInSortedOrder()
         {
             var pq = new MaxPriorityQueue<int, int>();
@@ -251,7 +251,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void MergingTwoPriorityQueuesAndCheckingIfExtractedInSortedOrder()
         {
             var pq1 = new MaxPriorityQueue<int, int>();

@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.Algorithms.Strings;
 
 namespace DSAUnitTests.Algorithms.Strings
 {
-    [TestClass]
+    [TestFixture]
     public class EditDistanceDamerauLevenshteinTests
     {
-        [TestMethod]
+        [Test]
         public void NullOrEmptyStringsDistanceCheck()
         {
             string s1 = null;
@@ -35,7 +35,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(EditDistance.DamerauLevenshteinDistance(s1, s2) == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void ReversedStringsDistanceCheck()
         {
             string s1 = "asdfghjkl";
@@ -50,7 +50,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(EditDistance.DamerauLevenshteinDistance(s1, s2) == s1.Length - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void DifferentLengthStringsDistanceCheck()
         {
             string s1 = "short string";

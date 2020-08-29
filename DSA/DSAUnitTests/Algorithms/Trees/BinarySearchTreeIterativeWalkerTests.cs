@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Trees;
 using DSA.Algorithms.Trees;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.Algorithms.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class BinarySearchTreeIterativeWalkerTests
     {
         /// <summary>
@@ -459,7 +459,7 @@ namespace DSAUnitTests.Algorithms.Trees
             return elements;
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeInOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -500,7 +500,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeInOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -541,7 +541,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreePreOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -582,7 +582,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreePreOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -623,7 +623,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreePostOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -664,7 +664,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreePostOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -705,7 +705,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeLevelOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -746,7 +746,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeLevelOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTree<int>();
@@ -787,7 +787,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void AVLTreeTraversal()
         {
             var tree = new AVLTree<int>();
@@ -826,7 +826,7 @@ namespace DSAUnitTests.Algorithms.Trees
 
         }
 
-        [TestMethod]
+        [Test]
         public void RedBlackTreeTraversal()
         {
             var tree = new RedBlackTree<int>();
@@ -861,7 +861,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapInOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -904,7 +904,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapInOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -947,7 +947,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapPreOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -990,7 +990,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapPreOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -1033,7 +1033,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapPostOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -1076,7 +1076,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapPostOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -1119,7 +1119,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapLevelOrderLeftToRightTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -1162,7 +1162,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void BSTreeMapLevelOrderRightToLeftTraversal()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -1205,7 +1205,7 @@ namespace DSAUnitTests.Algorithms.Trees
                             && listOfElementFromRecursiveWalker.Count == tree.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void AVLTreeMapTraversal()
         {
             var tree = new AVLTreeMap<int, int>();
@@ -1246,7 +1246,7 @@ namespace DSAUnitTests.Algorithms.Trees
 
         }
 
-        [TestMethod]
+        [Test]
         public void RedBlackTreeMapTraversal()
         {
             var tree = new RedBlackTreeMap<int, int>();

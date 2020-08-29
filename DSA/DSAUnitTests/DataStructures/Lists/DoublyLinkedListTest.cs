@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Lists;
 
 namespace DSAUnitTests.DataStructures.Lists
 {
-    [TestClass]
+    [TestFixture]
     public class DoublyLinkedListTest
     {
-        [TestMethod]
+        [Test]
         public void AddFirstForAllElementsAndCheckForOrder()
         {
             var list = new DoublyLinkedList<int>();
@@ -32,7 +32,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void AddLastForAllElementsAndCheckForOrder()
         {
             var list = new DoublyLinkedList<int>();
@@ -57,7 +57,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void AddAfterTheMiddleNodeAndCheckForOrder()
         {
             var list = new DoublyLinkedList<int>();
@@ -103,7 +103,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void AddBeforeTheMiddleNodeAndCheckForOrder()
         {
             var list = new DoublyLinkedList<int>();
@@ -149,7 +149,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveFirstForHalfTheItems()
         {
             var list = new DoublyLinkedList<int>();
@@ -178,7 +178,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveLastForHalfTheItems()
         {
             var list = new DoublyLinkedList<int>();
@@ -207,7 +207,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveMiddeNodeAndOnward()
         {
             var list = new DoublyLinkedList<int>();
@@ -246,7 +246,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingAllElements()
         {
             var list = new DoublyLinkedList<int>();
@@ -284,7 +284,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list.First.Value == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingList()
         {
             var list = new DoublyLinkedList<int>();
@@ -307,7 +307,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list.First.Value == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfContainedAfterAddingAndAfterRemoving()
         {
             var list = new DoublyLinkedList<int>();
@@ -343,7 +343,7 @@ namespace DSAUnitTests.DataStructures.Lists
             Assert.IsTrue(list.Count == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfNodeIsInvalidatedAfterRemoval()
         {
             var list = new DoublyLinkedList<int>();
@@ -380,7 +380,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && numberOfElementsInList == list.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializeListFromIEnumeraable()
         {
             var list = new DoublyLinkedList<int>();

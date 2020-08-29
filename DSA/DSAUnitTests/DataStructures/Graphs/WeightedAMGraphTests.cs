@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Graphs;
 using System.Linq;
 
 namespace DSAUnitTests.DataStructures.Graphs
 {
-    [TestClass]
+    [TestFixture]
     public class WeightedAMGraphTests
     {
-        [TestMethod]
+        [Test]
         public void CheckingIfVerticesAndEdgesAreAddedProperly()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -134,7 +134,7 @@ namespace DSAUnitTests.DataStructures.Graphs
             Assert.IsFalse(graph.ContainsEdge(8, 6));
         }
 
-        [TestMethod]
+        [Test]
         public void RemovingEdgesAndCheckingIfRemovedProperly()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -206,7 +206,7 @@ namespace DSAUnitTests.DataStructures.Graphs
             Assert.IsTrue(graph.EdgesCount == 9);
         }
 
-        [TestMethod]
+        [Test]
         public void RemovingVerticesAndCheckingIfRemovedProperly()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -278,7 +278,7 @@ namespace DSAUnitTests.DataStructures.Graphs
             Assert.IsTrue(graph.EdgesCount == 6);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfIncomingEdgesAreCorrect()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -342,7 +342,7 @@ namespace DSAUnitTests.DataStructures.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfOutgoingEdgesAreCorrect()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -406,7 +406,7 @@ namespace DSAUnitTests.DataStructures.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfBFSIsCorrect()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -492,7 +492,7 @@ namespace DSAUnitTests.DataStructures.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfDFSIsCorrect()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -579,7 +579,7 @@ namespace DSAUnitTests.DataStructures.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void UpdatingAndGettingEdgeWeight()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };

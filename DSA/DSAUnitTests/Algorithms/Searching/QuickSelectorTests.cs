@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Linq;
 using DSA.Algorithms.Searching;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.Algorithms.Searching
 {
-    [TestClass]
+    [TestFixture]
     public class QuickSelectorTests
     {
-        [TestMethod]
+        [Test]
         public void QuickSelectSmallestNotInPlace()
         {
             int itemCount = 10000;
@@ -33,7 +33,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void QuickSelectBiggestNotInPlace()
         {
             int itemCount = 10000;
@@ -57,7 +57,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void QuickSelectSmallestInPlace()
         {
             int itemCount = 10000;
@@ -81,7 +81,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void QuickSelectBiggestInPlace()
         {
             int itemCount = 10000;
@@ -105,7 +105,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void QuickSelectSmallestSameAsBiggestWithOppositeComparer()
         {
             int itemCount = 10000;
@@ -137,7 +137,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void QuickSelectSmallestRangeOfItems()
         {
             int itemCount = 10000;
@@ -176,7 +176,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void QuickSelectBiggestRangeOfItems()
         {
             int itemCount = 10000;

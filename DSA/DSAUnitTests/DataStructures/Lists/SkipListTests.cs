@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Lists;
 using System.Diagnostics;
 using System.Linq;
 
 namespace DSAUnitTests.DataStructures.Lists
 {
-    [TestClass]
+    [TestFixture]
     public class SkipListTests
     {
-        [TestMethod]
+        [Test]
         public void AddingOneMillionInts()
         {
             var list = new SkipList<int>();
@@ -24,7 +24,7 @@ namespace DSAUnitTests.DataStructures.Lists
             Assert.IsTrue(list.Count == 1000000);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAdding()
         {
             var list = new SkipList<int>();
@@ -66,7 +66,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAddingAndRemoving()
         {
             var list = new SkipList<int>();
@@ -115,7 +115,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAllExceptOne()
         {
             var list = new SkipList<int>();
@@ -147,7 +147,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && list.Head[0].Value == elementsCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingAllElements()
         {
             var list = new SkipList<int>();
@@ -222,7 +222,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingList()
         {
             var list = new SkipList<int>();
@@ -286,7 +286,7 @@ namespace DSAUnitTests.DataStructures.Lists
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfNodeIsInvalidatedAfterRemoval()
         {
             var list = new SkipList<int>();

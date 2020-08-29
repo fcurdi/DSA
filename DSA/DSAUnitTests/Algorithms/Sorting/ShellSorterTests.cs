@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Collections.Generic;
 using DSA.Algorithms.Sorting;
 
 namespace DSAUnitTests.Algorithms.Sorting
 {
-    [TestClass]
+    [TestFixture]
     public class ShellSorterTests
     {
-        [TestMethod]
+        [Test]
         public void SortingInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -43,7 +43,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -78,7 +78,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInAscendingOrderUsingAComparisonAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -113,7 +113,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInDescendingOrderUsingAComparisonAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -148,7 +148,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInAscendingOrderUsingACustomComparerAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -183,7 +183,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingInDescendingOrderUsingACustomComparerAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -218,7 +218,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfItemsInAscendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();
@@ -256,7 +256,7 @@ namespace DSAUnitTests.Algorithms.Sorting
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SortingARangeOfItemsInDescendingOrderAndCheckingIfSorted()
         {
             var list = new List<int>();

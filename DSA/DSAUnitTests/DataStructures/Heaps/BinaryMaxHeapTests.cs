@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Heaps;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.DataStructures.Heaps
 {
-    [TestClass]
+    [TestFixture]
     public class BinaryMaxHeapTests
     {
-        [TestMethod]
+        [Test]
         public void AddingElementsAndCheckingIfExtractedInSortedOrder()
         {
             var heap = new BinaryMaxHeap<int>();
@@ -49,7 +49,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingElementsWithCustomComparerAndCheckingIfExtractedInSortedOrder()
         {
             //Creating heap with reversed comparer
@@ -93,7 +93,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void HeapifyUnsortedCollectionAndCheckIfExtractedInSortedOrder()
         {
             var heap = new BinaryMaxHeap<int>();
@@ -138,7 +138,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingHeap()
         {
             var heap = new BinaryMaxHeap<int>();
@@ -201,7 +201,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void ReplacingMinElementAndCheckingIfExtractedInSortedOrder()
         {
             var heap = new BinaryMaxHeap<int>();
@@ -246,7 +246,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void MergingTwoHeapsAndCheckingIfExtractedInSortedOrder()
         {
             var heap1 = new BinaryMaxHeap<int>();
@@ -326,7 +326,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && mergedHeapElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void ConvertingToBinaryMinHeap()
         {
             var maxHeap = new BinaryMaxHeap<int>();

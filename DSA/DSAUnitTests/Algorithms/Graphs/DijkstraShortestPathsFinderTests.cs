@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Graphs;
 using DSA.Algorithms.Graphs;
 
 namespace DSAUnitTests.Algorithms.Graphs
 {
-    [TestClass]
+    [TestFixture]
     public class DijkstraShortestPathsFinderTests
     {
-        [TestMethod]
+        [Test]
         public void UndirectedAndUnweightedGraphShortestPathsCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -107,7 +107,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(paths.HasPathTo(9));
         }
 
-        [TestMethod]
+        [Test]
         public void DirectedAndUnweightedGraphShortestsPathsCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -218,7 +218,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(paths.HasPathTo(9));
         }
 
-        [TestMethod]
+        [Test]
         public void UndirectedAndWeightedGraphShortestPathsCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -354,7 +354,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(paths.HasPathTo(9));
         }
 
-        [TestMethod]
+        [Test]
         public void DirectedAndWeightedGraphShortestPathsCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -502,7 +502,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(paths.HasPathTo(9));
         }
 
-        [TestMethod]
+        [Test]
         public void StringWeightsShortestPathsWithAddWeightsDelegateUsageCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };

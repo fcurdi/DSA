@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Graphs;
 using System.Collections.Generic;
 using DSA.Algorithms.Graphs;
 
 namespace DSAUnitTests.Algorithms.Graphs
 {
-    [TestClass]
+    [TestFixture]
     public class BipartiteColorerTests
     {
-        [TestMethod]
+        [Test]
         public void BipartiteColoringOnUndirectedGraphCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -80,7 +80,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(graph.TryGetBipartiteColoring(out verticesColors));
         }
 
-        [TestMethod]
+        [Test]
         public void BipartiteColoringOnDirectedGraphCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -174,7 +174,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             Assert.IsFalse(graph.TryGetBipartiteColoring(out verticesColors));
         }
 
-        [TestMethod]
+        [Test]
         public void BipartiteColoringWeightedGraphCheck()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };

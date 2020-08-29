@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.Algorithms.Strings;
 
 namespace DSAUnitTests.Algorithms.Strings
 {
-    [TestClass]
+    [TestFixture]
     public class StringSearchBoyerMooreTests
     {
-        [TestMethod]
+        [Test]
         public void SinglePatternFirstOccurrence()
         {
             string t = "searching for a pattern in this string with multiple patterns";
@@ -31,7 +31,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(StringSearch.BoyerMooreSearchFirst(t, p) == -1);
         }
 
-        [TestMethod]
+        [Test]
         public void SinglePatternAllOccurrences()
         {
             string t = "searching for a pattern in this string with multiple patterns";
@@ -78,7 +78,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(positions.Count == expectedOccur.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void MultiplePatternsFirstOccurence()
         {
             string t = "searching for a pattern in this string with multiple patterns";
@@ -119,7 +119,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(positions.Count == expectedOccur.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void MultiplePatternsAllOccurrences()
         {
             string t = "searching for a pattern in this string with multiple patterns";

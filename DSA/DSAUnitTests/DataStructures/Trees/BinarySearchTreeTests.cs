@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Trees;
 using System.Diagnostics;
 using System.Linq;
 
 namespace DSAUnitTests.DataStructures.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class BinarySearchTreeTests
     {
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAdding()
         {
             BinarySearchTree<int> tree = new BinarySearchTree<int>();
@@ -54,7 +54,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAddingAndRemoving()
         {
             BinarySearchTree<int> tree = new BinarySearchTree<int>();
@@ -108,7 +108,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAllExceptOne()
         {
             BinarySearchTree<int> tree = new BinarySearchTree<int>();
@@ -145,7 +145,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && tree.Root.Value == elementsCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveRootEveryTimeUntilTreeElementsAreHalfed()
         {
             var tree = new BinarySearchTree<int>();
@@ -201,7 +201,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingTree()
         {
             var tree = new BinarySearchTree<int>();
@@ -265,7 +265,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingAllElements()
         {
             var tree = new BinarySearchTree<int>();
@@ -340,7 +340,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfNodeIsInvalidatedAfterClearingAndAfterRemoval()
         {
             var tree = new BinarySearchTree<int>();

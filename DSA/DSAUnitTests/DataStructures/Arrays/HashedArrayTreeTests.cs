@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Arrays;
 using System.Linq;
 
 namespace DSAUnitTests.DataStructures.Arrays
 {
-    [TestClass]
+    [TestFixture]
     public class HashedArrayTreeTests
     {
-        [TestMethod]
+        [Test]
         public void AddingItemsOneByOne()
         {
             var arr = new HashedArrayTree<int>();
@@ -34,7 +34,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && arr.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingRangeOfItems()
         {
             var arr = new HashedArrayTree<int>();
@@ -67,7 +67,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && arr2.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializingArrayListWithCollection()
         {
             var arr = new HashedArrayTree<int>();
@@ -96,7 +96,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && arr2.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void RemovingAllExceptOne()
         {
             var arr = new HashedArrayTree<int>();
@@ -126,7 +126,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && arr[0] == itemCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void RemovingAllItemsAndAddingAgain()
         {
             var arr = new HashedArrayTree<int>();
@@ -165,7 +165,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && countWasZero);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveRangeOfItems()
         {
             var arr = new HashedArrayTree<int>();
@@ -191,7 +191,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && arr[0] == itemCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void InsertAllItemsAtTheBeginningAndCheckForReversedOrder()
         {
             var arr = new HashedArrayTree<int>();
@@ -221,7 +221,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && areReversed);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAtZeroUntilOneItemIsLeft()
         {
             var arr = new HashedArrayTree<int>();
@@ -250,7 +250,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && arr[0] == itemCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void IndexOfAndLastIndexOfTest()
         {
             var arr = new HashedArrayTree<int>();
@@ -281,7 +281,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && allInPlace);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfContainedBeforeAndAfterRemoval()
         {
             var arr = new HashedArrayTree<int>();
@@ -305,7 +305,7 @@ namespace DSAUnitTests.DataStructures.Arrays
             Assert.IsTrue(arr.Count == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingCollection()
         {
             var arr = new HashedArrayTree<int>();
@@ -339,7 +339,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && everythingIntact);
         }
 
-        [TestMethod]
+        [Test]
         public void InsertingRangeOfItemsAtTheMiddle()
         {
             var arr = new HashedArrayTree<int>();

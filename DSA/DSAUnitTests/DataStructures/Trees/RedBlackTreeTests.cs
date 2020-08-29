@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ using System.Diagnostics;
 
 namespace DSAUnitTests
 {
-    [TestClass]
+    [TestFixture]
     public class RedBlackTreeTests
     {
-        [TestMethod]
+        [Test]
         public void AddingOneMillionInts()
         {
             var tree = new RedBlackTree<int>();
@@ -25,7 +25,7 @@ namespace DSAUnitTests
             Assert.IsTrue(tree.Count == 1000000);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAdding()
         {
             var tree = new RedBlackTree<int>();
@@ -63,7 +63,7 @@ namespace DSAUnitTests
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAddingAndRemoving()
         {
             var tree = new RedBlackTree<int>();
@@ -110,7 +110,7 @@ namespace DSAUnitTests
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAllExceptOne()
         {
             var tree = new RedBlackTree<int>();
@@ -144,7 +144,7 @@ namespace DSAUnitTests
                             && tree.Root.Right == null);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveRootEveryTimeUntilTreeElementsAreHalfed()
         {
             var tree = new RedBlackTree<int>();
@@ -193,7 +193,7 @@ namespace DSAUnitTests
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void BalancingCheckWithRootRotation()
         {
             var tree = new RedBlackTree<int>();
@@ -215,7 +215,7 @@ namespace DSAUnitTests
 
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingTree()
         {
             var tree = new RedBlackTree<int>();
@@ -279,7 +279,7 @@ namespace DSAUnitTests
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingAllElements()
         {
             var tree = new RedBlackTree<int>();
@@ -354,7 +354,7 @@ namespace DSAUnitTests
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfNodeIsInvalidatedAfterClearingAndAfterRemoval()
         {
             var tree = new RedBlackTree<int>();

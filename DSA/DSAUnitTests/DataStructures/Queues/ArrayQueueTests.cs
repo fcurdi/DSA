@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Queues;
 
 namespace DSAUnitTests.DataStructures.Queues
 {
-    [TestClass]
+    [TestFixture]
     public class ArrayQueueTests
     {
-        [TestMethod]
+        [Test]
         public void EnqueuingItemsOneByOne()
         {
             var queue = new ArrayQueue<int>();
@@ -33,7 +33,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && queue.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializingArrayQueueWithCollection()
         {
             var queue = new ArrayQueue<int>();
@@ -61,7 +61,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && queue2.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void DequeuingAllExceptOne()
         {
             var queue = new ArrayQueue<int>();
@@ -91,7 +91,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && trueCount == 1);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializationWithZeroCapacityAndEnqueuingItemsAfterwards()
         {
             var queue = new ArrayQueue<int>(0);
@@ -116,7 +116,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && queue.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void DequeuingAllItemsAndEnqueuingAgain()
         {
             var queue = new ArrayQueue<int>();
@@ -156,7 +156,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && countWasZero);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfContainedBeforeAndAfterDequeuing()
         {
             var queue = new ArrayQueue<int>();
@@ -185,7 +185,7 @@ namespace DSAUnitTests.DataStructures.Queues
             Assert.IsTrue(queue.Count == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void EnqueuingAfterClearingCollection()
         {
             var stack = new ArrayQueue<int>();
@@ -217,7 +217,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && stack.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void EnqueuingItemsAndCheckingIfIteratedInCorrectly()
         {
             var queue = new ArrayQueue<int>();
@@ -241,7 +241,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && queue.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void ConvertingQueueToArray()
         {
             var queue = new ArrayQueue<int>();
@@ -266,7 +266,7 @@ namespace DSAUnitTests.DataStructures.Queues
                             && queue.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void DequeuingHalfTheItemsAndEnquingTwiceAsMuch()
         {
             int itemCount = 500000;

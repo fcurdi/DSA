@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Trees;
 using System.Diagnostics;
 
 namespace DSAUnitTests.DataStructures.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class BinarySearchTreeMapTests
     {
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAdding()
         {
             BinarySearchTreeMap<int, int> tree = new BinarySearchTreeMap<int, int>();
@@ -53,7 +53,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAddingAndRemoving()
         {
             BinarySearchTreeMap<int, int> tree = new BinarySearchTreeMap<int, int>();
@@ -107,7 +107,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAllExceptOne()
         {
             BinarySearchTreeMap<int, int> tree = new BinarySearchTreeMap<int, int>();
@@ -144,7 +144,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && tree.Root.Value == elementsCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveRootEveryTimeUntilTreeElementsAreHalfed()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -200,7 +200,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingTree()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -264,7 +264,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingAllElements()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -339,7 +339,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfNodeIsInvalidatedAfterClearingAndAfterRemoval()
         {
             var tree = new BinarySearchTreeMap<int, int>();
@@ -383,7 +383,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && tree.Count == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingElementsWithIndexer()
         {
             BinarySearchTreeMap<int, int> tree = new BinarySearchTreeMap<int, int>();
@@ -427,7 +427,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void UpdatingElementsWithIndexerUsingTryGetValueMethodToGetValue()
         {
             BinarySearchTreeMap<int, int> tree = new BinarySearchTreeMap<int, int>();
@@ -492,7 +492,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void ContatinsValueBeforeAndAfterUpdatingValue()
         {
             BinarySearchTreeMap<int, int> tree = new BinarySearchTreeMap<int, int>();

@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Stacks;
 
 namespace DSAUnitTests.DataStructures.Stacks
 {
-    [TestClass]
+    [TestFixture]
     public class ArrayStackTests
     {
-        [TestMethod]
+        [Test]
         public void PushingItemsOneByOne()
         {
             var stack = new ArrayStack<int>();
@@ -33,7 +33,7 @@ namespace DSAUnitTests.DataStructures.Stacks
                             && stack.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializingArrayStackWithCollection()
         {
             var stack = new ArrayStack<int>();
@@ -62,7 +62,7 @@ namespace DSAUnitTests.DataStructures.Stacks
                             && stack2.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void PoppingAllExceptOne()
         {
             var stack = new ArrayStack<int>();
@@ -92,7 +92,7 @@ namespace DSAUnitTests.DataStructures.Stacks
                             && trueCount == 1);
         }
 
-        [TestMethod]
+        [Test]
         public void InitializationWithZeroCapacityAndPushingItemsAfterwards()
         {
             var stack = new ArrayStack<int>(0);
@@ -117,7 +117,7 @@ namespace DSAUnitTests.DataStructures.Stacks
                             && stack.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void PoppingAllItemsAndPushingAgain()
         {
             var stack = new ArrayStack<int>();
@@ -157,7 +157,7 @@ namespace DSAUnitTests.DataStructures.Stacks
                             && countWasZero);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfContainedBeforeAndAfterPopping()
         {
             var stack = new ArrayStack<int>();
@@ -186,7 +186,7 @@ namespace DSAUnitTests.DataStructures.Stacks
             Assert.IsTrue(stack.Count == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void PushingAfterClearingCollection()
         {
             var stack = new ArrayStack<int>();
@@ -218,7 +218,7 @@ namespace DSAUnitTests.DataStructures.Stacks
                             && stack.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void PushingItemsAndCheckingIfIteratedInReversedOrder()
         {
             var stack = new ArrayStack<int>();
@@ -242,7 +242,7 @@ namespace DSAUnitTests.DataStructures.Stacks
                             && stack.Count == trueCount);
         }
 
-        [TestMethod]
+        [Test]
         public void ConvertingStackToArray()
         {
             var stack = new ArrayStack<int>();

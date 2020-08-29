@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Heaps;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.DataStructures.Heaps
 {
-    [TestClass]
+    [TestFixture]
     public class FibonacciMinHeapTests
     {
-        [TestMethod]
+        [Test]
         public void AddingElementsAndCheckingIfExtractedInSortedOrder()
         {
             var heap = new FibonacciMinHeap<int>();
@@ -51,7 +51,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void HeapifyUnsortedCollectionAndCheckIfExtractedInSortedOrder()
         {
             var heap = new FibonacciMinHeap<int>();
@@ -96,7 +96,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingHeap()
         {
             var heap = new FibonacciMinHeap<int>();
@@ -159,7 +159,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void ReplacingMinElementAndCheckingIfExtractedInSortedOrder()
         {
             var heap = new FibonacciMinHeap<int>();
@@ -204,7 +204,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void MergingTwoHeapsAndCheckingIfExtractedInSortedOrder()
         {
             var heap1 = new FibonacciMinHeap<int>();
@@ -288,7 +288,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && mergedHeapElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void ConvertingToFibonacciMaxHeap()
         {
             var minHeap = new FibonacciMinHeap<int>();

@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Heaps;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.DataStructures.Heaps
 {
-    [TestClass]
+    [TestFixture]
     public class BinomialMaxHeapTests
     {
-        [TestMethod]
+        [Test]
         public void AddingElementsAndCheckingIfExtractedInSortedOrder()
         {
             var heap = new BinomialMaxHeap<int>();
@@ -49,7 +49,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void HeapifyUnsortedCollectionAndCheckIfExtractedInSortedOrder()
         {
             var heap = new BinomialMaxHeap<int>();
@@ -94,7 +94,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingHeap()
         {
             var heap = new BinomialMaxHeap<int>();
@@ -157,7 +157,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void ReplacingMinElementAndCheckingIfExtractedInSortedOrder()
         {
             var heap = new BinomialMaxHeap<int>();
@@ -202,7 +202,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && addedElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void MergingTwoHeapsAndCheckingIfExtractedInSortedOrder()
         {
             var heap1 = new BinomialMaxHeap<int>();
@@ -286,7 +286,7 @@ namespace DSAUnitTests.DataStructures.Heaps
                             && mergedHeapElements == removedElements);
         }
 
-        [TestMethod]
+        [Test]
         public void ConvertingToBinomialMinHeap()
         {
             var maxHeap = new BinomialMaxHeap<int>();

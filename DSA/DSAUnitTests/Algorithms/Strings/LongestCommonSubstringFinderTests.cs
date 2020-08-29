@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.Algorithms.Strings;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DSAUnitTests.Algorithms.Strings
 {
-    [TestClass]
+    [TestFixture]
     public class LongestCommonSubstringFinderTests
     {
-        [TestMethod]
+        [Test]
         public void CheckIfLCSLengthIsCorrect()
         {
             string s1 = "Hi... What are you doing?";
@@ -41,7 +41,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(length == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfAllLCSAreOutputed()
         {
             string s1 = "Just a simple test, nothing more.";
@@ -96,7 +96,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(LCSs.Count == expected.Length);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfOneOutputedLCSIsFound()
         {
             string s1 = "Just a simple test, nothing more.";
@@ -132,7 +132,7 @@ namespace DSAUnitTests.Algorithms.Strings
             Assert.IsTrue(allLCS.Contains(oneLCS));
         }
 
-        [TestMethod]
+        [Test]
         public void RandomStringCheckIfAllLCSAreFoundInStrings()
         {
             var rand = new Random(Environment.TickCount);

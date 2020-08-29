@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Collections.Generic;
 using DSA.Algorithms.Searching;
 using DSA.Algorithms.Sorting;
 
 namespace DSAUnitTests.Algorithms.Searching
 {
-    [TestClass]
+    [TestFixture]
     public class LinearSearcherIListTests
     {
-        [TestMethod]
+        [Test]
         public void SearchInListWithUniqueItems()
         {
             int itemCount = 2000;
@@ -32,7 +32,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SearchInListWithNonUniqueItems()
         {
             int maxItem = 2000;
@@ -74,7 +74,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SearchForMissingItems()
         {
             int maxItem = 2000;
@@ -97,7 +97,7 @@ namespace DSAUnitTests.Algorithms.Searching
             }
         }
 
-        [TestMethod]
+        [Test]
         public void SearchInRangeOfItems()
         {
             int itemCount = 2000;

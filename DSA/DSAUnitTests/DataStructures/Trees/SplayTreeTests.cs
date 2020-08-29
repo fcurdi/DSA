@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Trees;
 using System.Diagnostics;
 
 namespace DSAUnitTests.DataStructures.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class SplayTreeTests
     {
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAdding()
         {
             var tree = new SplayTree<int>();
@@ -56,7 +56,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAddingAndRemoving()
         {
             var tree = new SplayTree<int>();
@@ -118,7 +118,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAllExceptOne()
         {
             var tree = new SplayTree<int>();
@@ -160,7 +160,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && tree.Root.Value == elementsCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveRootEveryTimeUntilTreeElementsAreHalfed()
         {
             var tree = new SplayTree<int>();
@@ -216,7 +216,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfTreeIsSplayedAfterAddAndAfterContains()
         {
             var tree = new SplayTree<int>();
@@ -271,7 +271,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfTreeIsSplayedAfterRemoval()
         {
             var tree = new SplayTree<int>();
@@ -328,7 +328,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && tree.Root.Value == elementsCount - 1);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingTree()
         {
             var tree = new SplayTree<int>();
@@ -396,7 +396,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingAllElements()
         {
             var tree = new SplayTree<int>();
@@ -475,7 +475,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfNodeIsInvalidatedAfterClearingAndAfterRemoval()
         {
             var tree = new SplayTree<int>();

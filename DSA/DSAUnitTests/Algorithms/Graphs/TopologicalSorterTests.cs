@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Graphs;
 using DSA.Algorithms.Graphs;
 
 namespace DSAUnitTests.Algorithms.Graphs
 {
-    [TestClass]
+    [TestFixture]
     public class TopologicalSorterTests
     {
-        [TestMethod]
+        [Test]
         public void TopologicalSortSmallestVerticesFirst()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -59,7 +59,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void TopologicalSortBiggestVerticesFirst()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -110,7 +110,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void TopologicalSortOnWeightedGraph()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -162,7 +162,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void ExceptionForNotDirectedGraph()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -210,7 +210,7 @@ namespace DSAUnitTests.Algorithms.Graphs
             }
         }
 
-        [TestMethod]
+        [Test]
         public void ExceptionForCyclicGraph()
         {
             var vertices = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };

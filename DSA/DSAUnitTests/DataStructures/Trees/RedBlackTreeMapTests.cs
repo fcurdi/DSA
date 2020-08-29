@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Trees;
 using System.Diagnostics;
 
 namespace DSAUnitTests.DataStructures.Trees
 {
-    [TestClass]
+    [TestFixture]
     public class RedBlackTreeMapTests
     {
-        [TestMethod]
+        [Test]
         public void AddingOneMillionInts()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -21,7 +21,7 @@ namespace DSAUnitTests.DataStructures.Trees
             Assert.IsTrue(tree.Count == 1000000);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAdding()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -59,7 +59,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void SortedElementsAfterAddingAndRemoving()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -106,7 +106,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveAllExceptOne()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -140,7 +140,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && tree.Root.Right == null);
         }
 
-        [TestMethod]
+        [Test]
         public void RemoveRootEveryTimeUntilTreeElementsAreHalfed()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -189,7 +189,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void BalancingCheckWithRootRotation()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -211,7 +211,7 @@ namespace DSAUnitTests.DataStructures.Trees
 
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingTree()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -275,7 +275,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterRemovingAllElements()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -350,7 +350,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfNodeIsInvalidatedAfterClearingAndAfterRemoval()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -394,7 +394,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && tree.Count == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingElementsWithIndexer()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -436,7 +436,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && count == elementsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void UpdatingElementsWithIndexerUsingTryGetValueMethodToGetValue()
         {
             var tree = new RedBlackTreeMap<int, int>();
@@ -495,7 +495,7 @@ namespace DSAUnitTests.DataStructures.Trees
                             && removedEverything);
         }
 
-        [TestMethod]
+        [Test]
         public void ContatinsValueBeforeAndAfterUpdatingValue()
         {
             var tree = new RedBlackTreeMap<int, int>();

@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.DataStructures.Arrays;
 using DSA.DataStructures.Lists;
 
 namespace DSAUnitTests.DataStructures.Arrays
 {
-    [TestClass]
+    [TestFixture]
     public class SparseMatrixTests
     {
-        [TestMethod]
+        [Test]
         public void AddingItemsAndCheckingIfContained()
         {
             var matrix = new SparseMatrix<int>();
@@ -39,7 +39,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && matrix.Width == (maxColsNumber - 1) / colIncrease * colIncrease + 1);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAndRemovingHalfOfTheItems()
         {
             var matrix = new SparseMatrix<int>();
@@ -93,7 +93,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && removedSuccessfully);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAndRemovingAllItems()
         {
             var matrix = new SparseMatrix<int>();
@@ -151,7 +151,7 @@ namespace DSAUnitTests.DataStructures.Arrays
                             && matrix.Width == 0);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfGetRowItemsReturnItemsSortedByColumnIndex()
         {
             var matrix = new SparseMatrix<int>();
@@ -191,7 +191,7 @@ namespace DSAUnitTests.DataStructures.Arrays
             Assert.IsTrue(matrix.Count == itemsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfGetColumnItemsReturnItemsSortedByRowIndex()
         {
             var matrix = new SparseMatrix<int>();
@@ -231,7 +231,7 @@ namespace DSAUnitTests.DataStructures.Arrays
             Assert.IsTrue(matrix.Count == itemsCount);
         }
 
-        [TestMethod]
+        [Test]
         public void AddingAfterClearingMatrix()
         {
             var matrix = new SparseMatrix<int>();

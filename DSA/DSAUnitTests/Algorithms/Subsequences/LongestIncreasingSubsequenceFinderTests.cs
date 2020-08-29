@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DSA.Algorithms.Subsequences;
 using System.Collections.Generic;
 
 namespace DSAUnitTests.Algorithms.Subsequences
 {
-    [TestClass]
+    [TestFixture]
     public class LongestIncreasingSubsequenceFinderTests
     {
-        [TestMethod]
+        [Test]
         public void FindLISWithDefaultComparer()
         {
             var sequence = new List<int> { 0, 9, 7, 8, 3, 0, 9, 1, 0, 8, 9, 4, 2, 3, 7, 8, 9, 3, 8, 4, 0, 2, 6, 4, 10 };
@@ -36,7 +36,7 @@ namespace DSAUnitTests.Algorithms.Subsequences
             }
         }
 
-        [TestMethod]
+        [Test]
         public void FindLISWithAGivenComparer()
         {
             // Reversed comaprer
@@ -68,7 +68,7 @@ namespace DSAUnitTests.Algorithms.Subsequences
 
         }
 
-        [TestMethod]
+        [Test]
         public void CheckIfLISForReversedListWithReversedComparerIsSameAsNormal()
         {
             // The sequence is special because only one LIS is possible. If there were
